@@ -20,16 +20,18 @@ public class msgboxActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String[] versionArray = new String[] {"Q(10)","R(11)","S(12)"};
+                final boolean[] checkArray = new boolean[]{true,false,false};
                 AlertDialog.Builder dlg= new AlertDialog.Builder(msgboxActivity.this);
-                dlg.setTitle("제목입니다");
-                dlg.setMessage("이곳이 내용입니다.");
+                dlg.setTitle("좋아하는 버전은?");
                 dlg.setIcon(R.mipmap.ic_launcher);
-                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                dlg.setMultiChoiceItems(versionArray, checkArray, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(msgboxActivity.this,"확인을 눌렀네요.",Toast.LENGTH_SHORT).show();
+                    public void onClick(DialogInterface dialogInterface, int i, boolean b) {
+                        button1.setText(versionArray[i]);
                     }
                 });
+                dlg.setPositiveButton("닫기",null);
                 dlg.show();
             }
         });
