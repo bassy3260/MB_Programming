@@ -11,7 +11,7 @@
         android:theme="@style/Theme.BaseApp">
 
         <activity
-            android:name=".contextMenuActivity"
+            android:name=".msgboxActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
