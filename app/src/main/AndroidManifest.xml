@@ -10,13 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseApp">
         <activity
-            android:name=".MytabFragment"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".actionbarActivity"
+            android:name=".menuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
