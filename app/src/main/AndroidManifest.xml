@@ -11,7 +11,7 @@
         android:theme="@style/Theme.BaseApp">
 
         <activity
-            android:name=".week4Activity"
+            android:name=".diaryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
